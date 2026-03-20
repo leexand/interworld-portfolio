@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="assets/banner.gif" alt="InterWorld Banner" width="70%"/>
 <img src="assets/profile.gif" alt="InterWorld Profile" width="30%"/>
 
 # InterWorld
