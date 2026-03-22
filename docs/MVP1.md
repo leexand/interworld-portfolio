@@ -43,10 +43,10 @@ Activación al escribir `[nickname]: <texto>`. El bot elimina el mensaje origina
 
 ## Criterio de Completado
 
-- [ ] Usuario puede registrarse con `!create`
-- [ ] Usuario puede crear, ver, editar y eliminar personajes
-- [ ] Sistema de roleplay detecta y envía mensajes como el personaje
-- [ ] Webhooks operan con caché y se recuperan ante reinicios
+- [x] Usuario puede registrarse con `!create`
+- [x] Usuario puede crear, ver, editar y eliminar personajes
+- [x] Sistema de roleplay detecta y envía mensajes como el personaje
+- [x] Webhooks operan con caché y se recuperan ante reinicios
 - [ ] Comando `!help` implementado
 
 ---
