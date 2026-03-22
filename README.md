@@ -39,7 +39,7 @@ The project follows a structured multi-MVP roadmap, from core identity systems t
 - Edit character fields through Discord modals
 - Characters are server-scoped — one character can exist across multiple servers
 
-### Economy (in development)
+### Economy *(in development)*
 - Bank institutions with individual user and character accounts
 - Deposits, withdrawals and transfers between user and character accounts
 - Commerce system with items and properties
@@ -56,7 +56,7 @@ The project follows a structured multi-MVP roadmap, from core identity systems t
 
 InterWorld is built with a fully modular architecture. Each component type (commands, events, menus, modals, buttons, reactions) has its own handler that loads files dynamically at startup.
 
-See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for a detailed breakdown.
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for a detailed breakdown.
 
 ---
 
@@ -88,13 +88,32 @@ InterWorld is developed in structured MVPs:
 | MVP 7 | Administration & Moderation | ⏳ Pending |
 | MVP 8 | Web Dashboard | ⏳ Pending |
 
-See [docs/mvp.md](docs/mvp.md) for detailed breakdown of each MVP.
+See [docs/mvp.md](docs/mvp.md) for a detailed breakdown of each MVP.
+
+---
+
+## Documentation
+
+| File | Description |
+|------|-------------|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System design and technical decisions |
+| [docs/features.md](docs/features.md) | Detailed feature breakdown |
+| [docs/schemas.md](docs/schemas.md) | Database schema documentation |
+| [docs/mvp.md](docs/mvp.md) | MVP roadmap |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
 
 ---
 
 ## Add to Your Server
 
 [![Add InterWorld](https://img.shields.io/badge/Add%20InterWorld%20to%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1257775788208685187&permissions=8&integration_type=0&scope=bot)
+
+---
+
+## License
+
+All rights reserved. See [LICENSE.md](LICENSE.md) for details.
 
 ---
 
