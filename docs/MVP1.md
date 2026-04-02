@@ -1,52 +1,52 @@
-# MVP 1 — Sistema de Usuarios y Personajes
+# MVP 1 — Users, Characters & Roleplay
 
-> Base funcional de InterWorld. Define el sistema de identidad del bot: registro de usuarios y gestión completa de personajes, incluyendo el sistema de roleplay mediante webhooks.
+> Core functional base of InterWorld. Defines the identity system of the bot: user registration and full character management, including the webhook-based roleplay system.
 
-**Estado:** ✅ Completado — Abril 2026
-
----
-
-## Objetivo
-
-Implementar el núcleo del sistema de identidad de InterWorld, compuesto por el módulo de usuarios y el módulo de personajes, como prerequisito para todos los módulos futuros del ecosistema.
+**Status:** ✅ Completed — April 2026
 
 ---
 
-## Comandos
+## Objective
 
-| Comando | Descripción | Alias | Estado |
+Implement the core identity system of InterWorld, composed of the users module and the characters module, as a prerequisite for all future modules in the ecosystem.
+
+---
+
+## Commands
+
+| Command | Description | Alias | Status |
 |---------|-------------|-------|--------|
-| `!create` | Registra al usuario en el sistema de InterWorld | — | ✅ |
-| `!newchart` | Crea un nuevo personaje vinculado al usuario y servidor | — | ✅ |
-| `!chart-list` | Lista personajes con opciones de edición y eliminación | `charts`, `personajes`, `characters` | ✅ |
-| `!help` | Información general del bot y comandos disponibles | — | ✅ |
+| `!create` | Registers the user into the InterWorld system | — | ✅ |
+| `!newchart` | Creates a new character linked to the user and server | — | ✅ |
+| `!chart-list` | Lists characters with edit and delete options | `charts`, `characters` | ✅ |
+| `!help` | General bot information and available commands | — | ✅ |
 
 ---
 
-## Funcionalidades
+## Features
 
-### Sistema de Roleplay
-Activación al escribir `[nickname]: <texto>`. El bot elimina el mensaje original y lo reenvía como el personaje vía webhook.
+### Roleplay System
+Triggered by writing `[nickname]: <text>`. The bot deletes the original message and resends it as the character via webhook.
 
-- [x] Verificación de propiedad del personaje
-- [x] Verificación de vinculación al servidor
-- [x] Caché local de webhooks (TTL 8 min)
-- [x] Recuperación ante reinicios del bot (Discord como fuente de verdad)
-- [x] Limpieza automática de webhooks expirados
-
----
-
-## Schemas involucrados
-
-- `users` — Usuarios registrados en el sistema
-- `characters` — Personajes vinculados a usuarios y servidores
+- [x] Character ownership verification
+- [x] Server binding verification
+- [x] Local webhook cache (TTL 8 min)
+- [x] Restart recovery using Discord as source of truth
+- [x] Automatic cleanup of expired webhooks
 
 ---
 
-## Criterio de Completado
+## Schemas involved
 
-- [x] Usuario puede registrarse con `!create`
-- [x] Usuario puede crear, ver, editar y eliminar personajes
-- [x] Sistema de roleplay detecta y envía mensajes como el personaje
-- [x] Webhooks operan con caché y se recuperan ante reinicios
-- [x] Comando `!help` implementado
+- `users` — Users registered in the system
+- `characters` — Characters linked to users and servers
+
+---
+
+## Completion Criteria
+
+- [x] User can register with `!create`
+- [x] User can create, view, edit and delete characters
+- [x] Roleplay system detects and sends messages as the character
+- [x] Webhooks operate with cache and recover after restarts
+- [x] `!help` command implemented
