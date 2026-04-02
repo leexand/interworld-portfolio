@@ -5,7 +5,7 @@ InterWorld is developed in structured MVPs, each building on the previous withou
 ---
 
 ## MVP 1 — Users, Characters & Roleplay
-**Status:** 🔄 In progress
+**Status:** ✅ Completed — April 2026
 
 Core identity system. Users register into InterWorld, create and manage characters, and interact through the webhook-based roleplay system.
 
