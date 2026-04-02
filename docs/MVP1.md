@@ -2,6 +2,8 @@
 
 > Base funcional de InterWorld. Define el sistema de identidad del bot: registro de usuarios y gestión completa de personajes, incluyendo el sistema de roleplay mediante webhooks.
 
+**Estado:** ✅ Completado — Abril 2026
+
 ---
 
 ## Objetivo
@@ -17,7 +19,7 @@ Implementar el núcleo del sistema de identidad de InterWorld, compuesto por el 
 | `!create` | Registra al usuario en el sistema de InterWorld | — | ✅ |
 | `!newchart` | Crea un nuevo personaje vinculado al usuario y servidor | — | ✅ |
 | `!chart-list` | Lista personajes con opciones de edición y eliminación | `charts`, `personajes`, `characters` | ✅ |
-| `!help` | Información general del bot y comandos disponibles | — | ⏳ |
+| `!help` | Información general del bot y comandos disponibles | — | ✅ |
 
 ---
 
@@ -47,10 +49,4 @@ Activación al escribir `[nickname]: <texto>`. El bot elimina el mensaje origina
 - [x] Usuario puede crear, ver, editar y eliminar personajes
 - [x] Sistema de roleplay detecta y envía mensajes como el personaje
 - [x] Webhooks operan con caché y se recuperan ante reinicios
-- [ ] Comando `!help` implementado
-
----
-
-## Pendientes
-
-- [ ] `!help` — Información básica del bot y lista de comandos
+- [x] Comando `!help` implementado
