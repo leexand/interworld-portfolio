@@ -1,107 +1,105 @@
 # Privacy Policy
 
-**Last updated:** April 2026  
-**Project:** InterWorld  
-**Contact:** lexand.esc@gmail.com
+**Last updated:** April 2026
+**Project:** InterWorld
+**Contact:** [lexand.esc@gmail.com](mailto:lexand.esc@gmail.com)
 
 ---
 
 ## 1. Introduction
 
-This Privacy Policy describes how InterWorld and its associated bots (InterWorld, lexo, flynn) collect, use, and store data when you interact with our services on Discord. We are committed to handling your data responsibly and transparently.
+This Privacy Policy explains how InterWorld collects, uses, and stores data when you interact with the bot on Discord.
 
 ---
 
 ## 2. Data We Collect
 
-InterWorld collects only the minimum data necessary to operate its services:
+InterWorld collects only the minimum data required to function:
 
-| Data Type | Purpose |
-|-----------|---------|
-| Discord User ID | User identification and account linking |
-| Discord Server (Guild) ID | Server configuration and scoping |
-| Discord Channel ID | Channel configuration and logging |
-| Character data | Core roleplay functionality |
-| Server prefix and settings | Per-server bot configuration |
-| Voice channel metadata | Temporary channel management (flynn) |
+| Data Type                 | Purpose                       |
+| ------------------------- | ----------------------------- |
+| Discord User ID           | User identification           |
+| Discord Server (Guild) ID | Server-specific configuration |
+| Discord Channel ID        | Channel-based functionality   |
+| Character data            | Core roleplay system          |
+| Server settings           | Configuration of bot behavior |
 
 We do **not** collect:
-- Real names or personal identifiers
-- Email addresses
-- IP addresses
-- Message content beyond command processing
-- Payment information
+
+* Real names
+* Email addresses
+* IP addresses
+* Message content beyond command usage
+* Payment information
 
 ---
 
-## 3. How We Use Your Data
+## 3. How We Use Data
 
-Collected data is used exclusively to:
+Data is used strictly to:
 
-- Provide and maintain InterWorld services
-- Identify users and their associated characters within the system
-- Apply server-specific configurations
-- Enforce security and verification systems
-- Manage temporary voice channels
+* Provide and maintain InterWorld functionality
+* Manage characters and their interactions
+* Apply server-specific settings
+* Ensure proper system operation
 
-Data is never sold, rented, or shared with third parties for commercial purposes.
+We do not sell, rent, or share data for commercial purposes.
 
 ---
 
 ## 4. Data Storage
 
-All data is stored securely in a MongoDB Atlas database hosted in the cloud. Access to this database is restricted to authorized developers only. Data is stored for as long as it is necessary to provide the service.
+Data is stored securely in a cloud-hosted database. Access is restricted to the developer only.
 
 ---
 
 ## 5. Data Sharing
 
-We do not share your data with third parties except in the following limited circumstances:
+We do not share data except:
 
-- **Discord API** — Interaction with Discord's platform requires transmitting certain identifiers as part of normal bot operation.
-- **Legal requirements** — We may disclose data if required by law or to protect the rights and safety of our users.
+* When required for interaction with Discord’s API
+* When required by law
 
 ---
 
-## 6. Your Rights
+## 6. User Rights
 
-You have the right to:
+Users may:
 
-- **Access** — Request a copy of the data we hold about you.
-- **Deletion** — Request deletion of your data from our systems.
-- **Correction** — Request correction of inaccurate data.
+* Request access to their data
+* Request deletion of their data
+* Request correction of inaccurate data
 
-To exercise any of these rights, contact us at **lexand.esc@gmail.com**. We will respond within a reasonable timeframe.
+Requests can be made via **[lexand.esc@gmail.com](mailto:lexand.esc@gmail.com)**
 
 ---
 
 ## 7. Data Retention
 
-- **User data** is retained as long as you actively use the service.
-- **Server data** is removed when the bot is removed from the server.
-- Upon a deletion request, data will be permanently removed within 30 days.
+* User data is kept while actively using the bot
+* Server data is deleted when InterWorld is removed
+* Deletion requests are processed within 30 days
 
 ---
 
 ## 8. Security
 
-We implement reasonable technical measures to protect stored data against unauthorized access, alteration, or destruction. However, no system is completely secure, and we cannot guarantee absolute security.
+We apply reasonable measures to protect data, though no system can guarantee absolute security.
 
 ---
 
 ## 9. Children's Privacy
 
-InterWorld is not directed at children under the age of 13. We do not knowingly collect data from users under this age. If you believe a minor has provided us with data, please contact us immediately.
+InterWorld is not intended for users under 13. Any such data will be removed if identified.
 
 ---
 
-## 10. Changes to This Policy
+## 10. Changes
 
-We reserve the right to update this Privacy Policy at any time. Changes will be posted with an updated date. Continued use of the service after changes are posted constitutes acceptance of the updated policy.
+This policy may be updated at any time. Continued use implies acceptance of the updated version.
 
 ---
 
 ## 11. Contact
 
-For any privacy-related questions or data requests:  
-📧 **lexand.esc@gmail.com**
+📧 **[lexand.esc@gmail.com](mailto:lexand.esc@gmail.com)**
