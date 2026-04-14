@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased] — MVP 2 In Progress
+## [Unreleased] — MVP 2 continued
+
+### Changed — Architecture
+- Components reorganized into subfolders by domain: `buttons/banks/`, `buttons/characters/`, `buttons/economy/`
 
 ### Added — Economy
 - Bank institutions as global entities managed by the developer
@@ -31,13 +34,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Command structure reorganized into `src/types/commands/public/` and `src/types/commands/developers/`
 - Webhook system refactored to use one webhook per channel instead of one per character, eliminating Discord's 15-webhook-per-channel limit issues
 - `charts` command now filters characters by server before displaying the select menu
-
-### Added — Multiverse System (Hidden)
-- `functions/multiverse/` module created with config, engine, scheduler and handler
-- Anomaly system with 4 types: dimensional crack, lost character, corrupt info, rare signal
-- Phase-based probability system (phases 1–5) for progressive event rollout
-- Per-channel cooldown system to prevent anomaly spam
-- System is fully built but disabled — activation pending the Multiverse announcement
 
 ### Fixed
 - Webhook cache now handles `Unknown Webhook` (error 10015) gracefully — recreates webhook on failure
