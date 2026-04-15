@@ -190,6 +190,14 @@ Check webhook cache (key: guildId-channelId)
 
 ---
 
+### Design Principles
+
+- Modular command system
+- UI routing via encoded customIds
+- Server-based configuration
+- Separation between logic and transport layer (Discord)
+- Progressive scalability (MVP-based development)
+
 ## Deployment
 
 InterWorld is deployed on **Railway** with automatic deploys on push to the `main` branch. Environment variables are managed directly in Railway — never in the repository.
