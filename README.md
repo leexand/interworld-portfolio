@@ -80,7 +80,7 @@ InterWorld is developed in structured MVPs:
 | MVP | Focus | Status |
 |-----|-------|--------|
 | MVP 1 | Users, Characters & Roleplay | ✅ Completed — April 2026 |
-| MVP 2 | Economy Base (Banking) | 🔄 In progress |
+| MVP 2 | Economy Base (Banking) | ✅ Completed — April 2026 |
 | MVP 3 | Commerce (Items & Properties) | ⏳ Pending |
 | MVP 4 | Financial Services | ⏳ Pending |
 | MVP 5 | Social (Guilds & Reputation) | ⏳ Pending |
