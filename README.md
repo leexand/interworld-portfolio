@@ -105,6 +105,13 @@ See [docs/mvp.md](docs/mvp.md) for a detailed breakdown of each MVP.
 
 ---
 
+## ⚙️ Technical Architecture (Extract)
+
+Below are simplified extracts of InterWorld's internal systems.
+Sensitive logic and full implementations are intentionally omitted.
+
+---
+
 ## Add to Your Server
 
 [![Add InterWorld](https://img.shields.io/badge/Add%20InterWorld%20to%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1257775788208685187&permissions=8&integration_type=0&scope=bot)
