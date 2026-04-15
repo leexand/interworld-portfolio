@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased] — MVP 2 continued
+## [Unreleased] — Completed — April 2026
 
 ### Changed — Architecture
 - Components reorganized into subfolders by domain: `buttons/banks/`, `buttons/characters/`, `buttons/economy/`
@@ -16,9 +16,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `accounts` schema linking users to a bank with balance and transaction history
 - `!banklist` command — interactive bank browser with select menu, bank details and account opening flow
 - `!balance` command — shows global user balance and bank account info (`!balance bank` for bank details)
+- `!balance` now shows currency balance of all characters registered in the current server
 - `!deposit` command — transfers money from global balance to bank account with limit validation
 - `!withdraw` command — transfers money from bank account to global balance with limit validation
 - `!extenddeposit` command — extends the transaction limit by paying a fee (5% of new limit)
+- `!chartransfer send <amount>` — transfers money from bank account to a character's balance
+- `!chartransfer get <amount>` — withdraws money from a character's balance to the bank account
 - `!passmoney` developer command — grants money to a user's global balance
 - `!stealmoney` developer command — removes money from a user's global balance
 
