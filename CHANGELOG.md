@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased] — Completed — April 2026
+## [0.2.0] — Completed — April 2026
 
 ### Changed — Architecture
 - Components reorganized into subfolders by domain: `buttons/banks/`, `buttons/characters/`, `buttons/economy/`
