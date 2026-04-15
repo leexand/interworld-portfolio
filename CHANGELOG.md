@@ -6,42 +6,52 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [0.2.0] — MVP 2 Completed — April 2026
+## [Unreleased] — MVP 3 prep
 
-### Changed — Architecture
-- Components reorganized into subfolders by domain: `buttons/banks/`, `buttons/characters/`, `buttons/economy/`
+---
+
+## [0.2.0] — MVP 2 Completed — April 2026
 
 ### Added — Economy
 - Bank institutions as global entities managed by the developer
 - `accounts` schema linking users to a bank with balance and transaction history
 - `!banklist` command — interactive bank browser with select menu, bank details and account opening flow
-- `!balance` command — shows global user balance and bank account info (`!balance bank` for bank details)
-- `!balance` now shows currency balance of all characters registered in the current server
+- `!balance` command — shows global user balance, bank account info and server character balances (`!balance bank` for full bank details)
 - `!deposit` command — transfers money from global balance to bank account with limit validation
 - `!withdraw` command — transfers money from bank account to global balance with limit validation
 - `!extenddeposit` command — extends the transaction limit by paying a fee (5% of new limit)
-- `!chartransfer send <amount>` — transfers money from bank account to a character's balance
-- `!chartransfer get <amount>` — withdraws money from a character's balance to the bank account
+- `!chartransfer send <amount>` command — transfers money from bank account to a character via interactive select menu
+- `!chartransfer get <amount>` command — withdraws money from a character back to the bank account
 - `!passmoney` developer command — grants money to a user's global balance
 - `!stealmoney` developer command — removes money from a user's global balance
+- `chartransferSelect` menu handler — executes character transfers, logs `transfer_in` / `transfer_out` to transaction history, respects bank `deposit_limit`
 
 ### Added — Schemas
 - `banks` schema extended with `bankcode`, `deposit_limit` and `opening_deposit` fields
-- `accounts` schema — individual bank accounts with balance and full transaction history
+- `accounts` schema — individual bank accounts with balance and full transaction history (`deposit`, `withdraw`, `transfer_in`, `transfer_out`)
 - `items` schema — global item catalog with categories, effects and stock control
 - `properties` schema — global property catalog with types, insurance and availability
 - `guilds` schema — per-server guild institutions with levels, resources and members
 - `jobs` schema — global job catalog with income cycles and requirements
 
 ### Changed — Architecture
-- Command structure reorganized into `src/types/commands/public/` and `src/types/commands/developers/`
+- Components reorganized into subfolders by domain: `buttons/banks/`, `buttons/characters/`, `buttons/economy/`, `menus/banks/`, `menus/characters/`, `menus/economia/`
+- Command structure reorganized into `src/types/commands/public/` and `src/types/commands/dev/`
+- Prefix system now supports multiple prefixes simultaneously: server-configured prefix, `I!` as a global fallback, and bot mention (`@InterWorld`) — all resolved in a single regex pass before command dispatch
 - Webhook system refactored to use one webhook per channel instead of one per character, eliminating Discord's 15-webhook-per-channel limit issues
 - `charts` command now filters characters by server before displaying the select menu
+- `characters` schema — replaced global `chart_cant` counter with `server_limits[]` array tracking character count per server independently, enabling correct per-server limits
+- Character creation limit is now enforced per server: 6 characters without premium, 15 with premium
 
 ### Fixed
 - Webhook cache now handles `Unknown Webhook` (error 10015) gracefully — recreates webhook on failure
 - Character lookup in all modals and buttons now uses `chartid` instead of array index, preventing cross-server data leaks
 - `charts` select menu now only shows characters registered in the current server
+- `acceptDelete` now decrements `server_limits[server].count` instead of syncing the removed global `chart_cant`
+- Character creation no longer blocked by unrelated servers — limit is now scoped to the server where the command is executed
+
+### Known issues
+- `getLimit()` in `chart.js` always returns `LIMIT_DEFAULT` (6) regardless of premium status — premium path returns the wrong constant and needs to be corrected to `LIMIT_PREMIUM`
 
 ---
 
