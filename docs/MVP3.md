@@ -2,6 +2,7 @@
 
 > InterWorld's marketplace. Users and characters can buy, sell and trade items and properties. The bank acts as intermediary and regulator of all transactions.
 
+**Status:** 🔄 In progress
 ---
 
 ## Objective
