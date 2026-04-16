@@ -110,89 +110,11 @@ See [docs/mvp.md](docs/mvp.md) for a detailed breakdown of each MVP.
 Below are simplified extracts of InterWorld's internal systems.
 Sensitive logic and full implementations are intentionally omitted.
 
----
-
-/**
- * Command detection system
- * Supports:
- * - Dynamic prefix per server
- * - Fallback prefix
- * - Bot mention (@bot command)
- */
-async function handleMessage(message, client, prefix) {
-    const prefixes = [prefix, 'I!'].filter(Boolean)
-
-    // detect mention as prefix
-    const mentionRegex = new RegExp(`^<@!?${client.user.id}>\\s+`)
-
-    const used =
-        prefixes.find(p => message.content.startsWith(p)) ||
-        message.content.match(mentionRegex)?.[0]
-
-    // if no valid prefix → not a command
-    if (!used) return false
-
-    const args = message.content
-        .slice(used.length) // remove prefix or mention
-        .trim()
-        .split(/ +/)
-
-    const commandName = args.shift()?.toLowerCase()
-
-    // dynamic command resolution (name + aliases)
-    const command =
-        client.commands.get(commandName) ||
-        client.commands.find(cmd => cmd.alias?.includes(commandName))
-
-    if (!command) return false
-
-    await command.execute(message, args, client)
-
-    return true
-}
-
----
-
-/**
- * Component routing system
- * CustomId structure:
- * type:system:userId:extraData
- */
-function handleInteraction(interaction, client) {
-    const [type, system, userId] = interaction.customId.split(':')
-
-    // security: only the owner can use it
-    if (userId && interaction.user.id !== userId) {
-        return interaction.reply({ content: 'Not your interaction', ephemeral: true })
-    }
-
-    switch (type) {
-        case 'button':
-            return client.buttons.get(system)?.execute(interaction)
-
-        case 'menu':
-            return client.menus.get(system)?.execute(interaction)
-
-        case 'modal':
-            return client.modals.get(system)?.execute(interaction)
-    }
-}
----
-
-/**
- * Example of controlled update in nested MongoDB structures
- */
-function updateCharacterBalance(characterDoc, charId, amount) {
-    const index = characterDoc.characters.findIndex(c => c.chartid === charId)
-    if (index === -1) return null
-
-    characterDoc.characters[index].balance.currency += amount
-
-    // inform mongoose about deep changes
-    characterDoc.markModified(`characters.${index}.balance.currency`)
-
-    return characterDoc
-}
+| File | Description |
+|------|-------------|
+| [Command Detection System](Technical/CommandDetection.js) | Dynamic command parser supporting per-server prefixes, fallback prefixes, and bot mention handling. Includes argument parsing and flexible command resolution (name + aliases). |
+| [Component Routing System](Technical/ComponentRouting_System.js) | Scalable interaction routing architecture using structured customIds. Handles buttons, menus, and modals with built-in user validation and modular execution. |
+| [Data Management](Technical/dataManagement.js) | Controlled manipulation of nested MongoDB structures, including character-based data updates and explicit change tracking for reliable persistence. |
 
 ---
 
