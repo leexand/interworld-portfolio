@@ -19,9 +19,15 @@
 
 ## Overview
 
-InterWorld is a fully-featured Discord bot designed for roleplay communities. It provides tools for character creation and management, an immersive roleplay experience via Discord webhooks, and a complete virtual economy system — all built to integrate seamlessly into any server theme.
+InterWorld is a fully-featured Discord bot designed for roleplay communities. 
+It provides tools for character creation and management, an immersive roleplay 
+experience via Discord webhooks, and a complete virtual economy system — all 
+built to integrate seamlessly into any server theme.
 
-The project follows a structured multi-MVP roadmap, from core identity systems to a full web dashboard, designed to scale progressively without breaking existing functionality.
+Designed and built solo as a long-term backend engineering project, InterWorld 
+follows a structured multi-MVP roadmap, from core identity systems to a full 
+web dashboard, designed to scale progressively without breaking existing 
+functionality.
 
 ---
 
@@ -129,6 +135,16 @@ Sensitive logic and full implementations are intentionally omitted.
 All rights reserved. See [LICENSE.md](LICENSE.md) for details.
 
 ---
+
+## About the Developer
+
+Backend developer focused on modular systems, event-driven architecture and 
+real-time platforms. InterWorld is my main active project — built from scratch 
+and maintained solo.
+
+Currently open to **remote junior backend roles** (part-time).
+
+[GitHub](https://github.com/leexand) · [LinkedIn](https://linkedin.com/in/alexander-escobar-dev) · lexand.esc@gmail.com
 
 ## Author
 
